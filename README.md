@@ -1,6 +1,7 @@
 # E-commerce
 Descrição:
-O projeto é um E-Commerce onde o usuário pode comprar coisas.
+O projeto é um E-Commerce onde o usuário pode comprar coisas.  
+Alunos: Eduardo dos Santos Costa e Erik Everton Rodrigues
 ## Funcionalidades:
 
 1 - Login
@@ -12,7 +13,4 @@ O projeto é um E-Commerce onde o usuário pode comprar coisas.
 7 - Públicar produtos
 
 ## Motivação:
-Criar um site interativo com HTML, CSS e JavaScript para construir o nosso e-commerce e passar na disciplina.
-
-## Outras Informações:
-Não precisa
+Criar um site interativo com HTML, CSS e JavaScript para construir o nosso e-commerce.
