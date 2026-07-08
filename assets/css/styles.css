@@ -1,0 +1,114 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+main {
+    background-color: #1c0e31;
+}
+.first-section {
+    padding: 10%;
+    color: white;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.destaque-semana {
+    border: 1px solid #d8063a;
+    color: #d8063a;
+    background-color: #231438;
+    width: 210px;
+    padding: 5px;
+    text-align: center;
+    border-radius: 16px;
+}
+
+.produto-destaque {
+    font-size:80px;
+}
+
+#red {
+    color: #d8063a;
+}
+
+#cinza {
+    color: gray;
+}
+
+.desconto-hero {
+    background-color: #51af6c;
+    border-radius: 10px;
+    width: 100px;
+    height: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 5px;
+}
+
+.button-hero {
+    width: 200px;
+    height: 50px;
+    margin-top: 10px;
+    border-radius: 12px;
+    background-color: #d8063a;
+    border: none;
+    color: white;
+    font-size: 16px;
+    margin-right: 10px;
+}
+
+#ver-hero {
+    background-color: #231438;
+    border: 1px gray solid;
+
+}
+
+.precos {
+    display: flex;
+    align-items: center;
+    height: 30px;
+    gap: 10px;
+}
+
+.hero-item {
+    background-image: url('../imgs/placa.jpeg');
+    background-size: cover;
+    background-position: center;
+    height: 450px;
+    width: 500px;
+    border: 5px #d8063a solid;
+    border-radius: 16px;
+}
+
+.produtos {
+    display: flex;
+    padding: 0% 10% 5% 10%;
+
+}
+.card-produto {
+    display: flex;
+    z-index: 0; 
+    flex-direction: column;
+    padding: 8px;
+    width: 300px;
+    height: auto;
+    border: 1px #4e4160 solid;
+    color: white;
+    background-color: #231438;
+    border-radius: 16px;
+    .produto-destaque {
+        font-size: 18px;
+    }
+    .button-hero {
+        width: 100%;
+    }
+}
+
+.card-produto-img {
+    margin-bottom: 5px;
+    border-top-left-radius: 16px;
+    border-top-right-radius: 16px;
+}
