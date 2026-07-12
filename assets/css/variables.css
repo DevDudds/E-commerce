@@ -1,0 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,500;1,14..32,500&family=Poppins:wght@500;600;800&display=swap');
+
+:root {
+    --bg-dark-primary: #1c0e31;
+    --bg-dark-secondary: #231438;
+    --color-primary: #fff;
+    --verde: #51af6c;
+    --vermelho: #d8063a;
+    --poppins: "Poppins", sans-serif;
+    --inter: "Inter", sans-serif;
+}
