@@ -4,15 +4,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/css/styles.css"><title>Inicial</title>
+    <script src="https://kit.fontawesome.com/898f59f198.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <header>
-        <!--Espaço para o header-->
+        <nav>
+            <div class="search-head">
+                <div class="logo-site">
+                    <img src="" alt="logo">
+                    <div class="busca-produto">
+                        <input type="text" placeholder="Buscar produtos, marcas, categorias...">
+                        <div class="icon">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="head-buttons">
+                    <button class="login"><i class="fa-regular fa-user">&ThickSpace;</i>Entrar</button>
+                    <button class="cart"><i class="fa-solid fa-cart-arrow-down">&ThickSpace;</i>Carrinho</button>
+                </div>
+            </div>
+        </nav>
     </header>
     <main>
         <section class="first-section">
             <div>
-                <h3 class="destaque-semana">Destaque da semana</h3>
+                <h3 class="destaque-semana"><i class="fa-solid fa-fire"></i> Destaque da semana</h3>
                 <p class="produto-destaque"><strong>RTX 4090</strong></p>
                 <p class="produto-destaque" id="red"><strong>ROG STRIX OC</strong></p>
                 <p id="cinza">A placa de vídeo mais poderosa do mercado para gaming 4K e criação profissional.</p>
@@ -21,11 +38,49 @@
                 </div>
                 <h2 class="produto-destaque">R$ 12.999,00</h2>
                 <p id="cinza">ou 12x de R$ 1.083,25 sem juros</p>
-                <button class="button-hero">Comprar Agora</button>
-                <button class="button-hero" id="ver-hero">Ver Detalhes</button>
+                <button class="button-hero"><i class="fa-solid fa-cart-arrow-down"> </i> Comprar Agora</button>
+                <button class="button-hero" id="ver-hero"><i class="fa-solid fa-eye"> </i> Ver Detalhes</button>
             </div>
             <div class="hero-item">
 
+            </div>
+        </section>
+        <section class="qualidades">
+            <div class="qualidade-item">
+                <div class="qualidade-icon">
+                    <i class="fa-solid fa-truck"></i>
+                </div>
+                <div class="qualidade-content">
+                    <h4>Frete Gratis</h5>
+                    <p id="cinza">Acima de R$299,00</p>
+                </div>
+            </div>
+            <div class="qualidade-item">
+                <div class="qualidade-icon">
+                    <i class="fa-solid fa-credit-card"></i>
+                </div>
+                <div class="qualidade-content">
+                    <h4>12x Sem Juros</h5>
+                    <p id="cinza">No cartao de credito</p>
+                </div>
+            </div>
+            <div class="qualidade-item">
+                <div class="qualidade-icon">
+                    <i class="fa-solid fa-shield"></i>
+                </div>
+                <div class="qualidade-content">
+                    <h4>Garantia Total</h5>
+                    <p id="cinza">Em todos os produtos</p>
+                </div>
+            </div>
+            <div class="qualidade-item">
+                <div class="qualidade-icon">
+                    <i class="fa-solid fa-box"></i>
+                </div>
+                <div class="qualidade-content">
+                    <h4>Embalagem segura</h5>
+                    <p id="cinza">Proteçao maxima</p>
+                </div>
             </div>
         </section>
         <section class="produtos">
@@ -71,5 +126,38 @@
             </div>  
         </section>
     </main>
+    <footer>
+        <div class="footer-links">
+            <div>
+                <h4>Empresa</h4>
+                <p>Sua loja de tecnologia com</p>
+                <p>os melhores preços e</p>
+                <p>atendimento especializado</p>
+                <p>no Brasil.</p>
+            </div>
+            <div>
+                <h4>INSTITUCIONAL</h4>
+                <p>Sobre Nos</p>
+                <p>Trabalhe Conosco</p>
+                <p>Blog de Tecnologia</p>
+                <p>Imprensa</p>
+            </div>
+            <div>
+                <h4>ATENDIMENTO</h4>
+                <p>Central de Ajuda</p>
+                <p>Troca e Devoluçao</p>
+                <p>Rastrear Pedido</p>
+                <p>Fale Conosco</p>
+            </div>
+            <div>
+                <h4>CATEGORIAS</h4>
+                <p>Placas de Video</p>
+                <p>Processadores</p>
+                <p>Monitores</p>
+                <p>Perifericos</p>
+            </div>
+        </div>
+        <p>© 2025 NexusTech. Todos os direitos reservados.</p>
+    </footer>
 </body>
 </html>
