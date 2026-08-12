@@ -1,0 +1,72 @@
+[
+  {
+    "imagem": "assets/imgs/placa.jpeg",
+    "marca": "Asus",
+    "categoria": "Placa de Vídeo",
+    "nome": "GeForce RTX 4090 Triple Fan",
+    "valor": 12999.00
+  },
+  {
+    "imagem": "assets/imgs/4080.jpg",
+    "marca": "Gigabyte",
+    "categoria": "Placa de Vídeo",
+    "nome": "GeForce RTX 4080 Super Gaming OC",
+    "valor": 8999.00
+  },
+  {
+    "imagem": "assets/imgs/sapphire.jpeg",
+    "marca": "Sapphire",
+    "categoria": "Placa de Vídeo",
+    "nome": "Radeon RX 7900 XTX Nitro+",
+    "valor": 7499.00
+  },
+  {
+    "imagem": "assets/imgs/ryzen9.jpeg",
+    "marca": "AMD",
+    "categoria": "Processador",
+    "nome": "Ryzen 9 9950X",
+    "valor": 4299.00
+  },
+  {
+    "imagem": "assets/imgs/i9.jpeg",
+    "marca": "Intel",
+    "categoria": "Processador",
+    "nome": "Core i9-14900K",
+    "valor": 3899.00
+  },
+  {
+    "imagem": "assets/imgs/juhor.jpeg",
+    "marca": "Juhor",
+    "categoria": "Memória RAM",
+    "nome": "Juhor RGB 32GB DDR5 6000MHz",
+    "valor": 899.00
+  },
+  {
+    "imagem": "assets/imgs/kingston.jpg",
+    "marca": "Kingston",
+    "categoria": "Memória RAM",
+    "nome": "Fury Beast 16GB DDR5 5200MHz",
+    "valor": 449.00
+  },
+  {
+    "imagem": "assets/imgs/ssd2tb.jpeg",
+    "marca": "Samsung",
+    "categoria": "SSD",
+    "nome": "990 Pro 2TB NVMe M.2",
+    "valor": 1199.00
+  },
+  {
+    "imagem": "assets/imgs/850.jpeg",
+    "marca": "Cooler Master",
+    "categoria": "Fonte de Alimentação",
+    "nome": "MWE Gold 850W Modular",
+    "valor": 799.00
+  },
+  {
+    "imagem": "assets/imgs/nzxt.jpeg",
+    "marca": "NZXT",
+    "categoria": "Water Cooler",
+    "nome": "Kraken 360 RGB",
+    "valor": 1399.00
+  }
+]

@@ -8,8 +8,12 @@
 }
 
 header {
-    padding: 15px 10% 0% 10%;
+    padding: 15px 10% 10px 10%;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
     border: 1px #231438 solid;
+    border-bottom: 1px solid #301f49;
     background-color: var(--bg-dark-primary);
     .search-head {
         display: flex;
@@ -70,6 +74,7 @@ header {
         font-size: 16px;
         border: none;
         border-radius: 20px;
+        cursor: pointer;
     }
     .cart {
         background-color: #d8063a;
@@ -232,11 +237,13 @@ main {
     border-radius: 16px;
     margin-bottom: 30px;
     transition: 300ms;
+    cursor: pointer;
     .produto-destaque {
         font-size: 18px;
     }
     .button-hero {
         width: 100%;
+        cursor: pointer;
     }
     &:hover {
         transform: scale(1.01);
@@ -244,6 +251,7 @@ main {
 }
 
 .card-produto-img {
+    min-height: 332px;
     margin-bottom: 5px;
     border-top-left-radius: 16px;
     border-top-right-radius: 16px;
