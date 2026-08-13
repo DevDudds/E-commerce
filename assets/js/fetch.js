@@ -1,16 +1,18 @@
-const produtos = document.getElementById("produtos");
+const produtosContainer = document.getElementById("produtos");
 
-fetch("./assets/js/data/produtos.json")
-    .then(resp => {
+export async function carregarProdutos() {
+
+    try {
+
+        const resp = await fetch("./assets/js/data/produtos.json");
+
         if (!resp.ok) {
             throw new Error(`Erro ao carregar JSON: ${resp.status}`);
         }
 
-        return resp.json();
-    })
-    .then(item => {
+        const produtos = await resp.json();
 
-        produtos.innerHTML = item.map(produto => {
+        produtosContainer.innerHTML = produtos.map(produto => {
 
             const preco = produto.valor.toLocaleString("pt-BR", {
                 style: "currency",
@@ -38,7 +40,7 @@ fetch("./assets/js/data/produtos.json")
                         12x de R$ 1.083,25 sem juros
                     </p>
 
-                    <button class="button-hero">
+                    <button data-id="${produto.id}" class="button-hero">
                         Adicionar ao Carrinho
                     </button>
 
@@ -47,7 +49,13 @@ fetch("./assets/js/data/produtos.json")
 
         }).join("");
 
-    })
-    .catch(erro => {
+        return produtos;
+
+    } catch (erro) {
+
         console.error(erro);
-    });
+
+        return [];
+
+    }
+}
