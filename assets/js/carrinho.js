@@ -45,6 +45,13 @@ function adicionarCarrinho(id) {
         });
     }
     salvarCarrinho();
+    renderizarProdutos();
+}
+
+function removerItem(id) {
+    carrinho = carrinho.filter(item => item.id !== id);
+    salvarCarrinho();
+    renderizarProdutos();
 }
 
 export default function renderizarProdutos() {
@@ -96,4 +103,44 @@ export default function renderizarProdutos() {
     });
 }
 
+function alterarQuantidade(id, valor) {
+    const item = carrinho.find(item => item.id === id);
 
+    if (!item) return;
+
+    item.quantidade += valor;
+
+    if (item.quantidade <= 0) {
+        carrinho = carrinho.filter(
+            item => item.id !== id
+        );
+    }
+
+    salvarCarrinho();
+    renderizarProdutos();
+}
+
+document.addEventListener("click", event => {
+    const diminuir = event.target.closest(".diminuir");
+
+    if (diminuir) {
+        const id = Number(diminuir.dataset.id);
+        alterarQuantidade(id, -1);
+        return;
+    }
+
+    const aumentar = event.target.closest(".aumentar");
+
+    if (aumentar) {
+        const id = Number(aumentar.dataset.id);
+        alterarQuantidade(id, +1)
+        return;
+    }
+
+    const remover = event.target.closest(".remover-item");
+
+    if (remover) {
+        const id = Number(remover.dataset.id);
+        removerItem(id);
+    }
+});
