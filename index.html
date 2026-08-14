@@ -22,11 +22,46 @@
                 </div>
                 <div class="head-buttons">
                     <button class="login"><i class="fa-regular fa-user">&ThickSpace;</i>Entrar</button>
-                    <button class="cart"><i class="fa-solid fa-cart-arrow-down">&ThickSpace;</i>Carrinho</button>
+                    <button class="cart abrir-carrinho"><i class="fa-solid fa-cart-arrow-down">&ThickSpace;</i>Carrinho</button>
                 </div>
             </div>
         </nav>
     </header>
+
+    <aside class="carrinho" id="carrinho">
+
+        <div class="carrinho-header">
+            <h2>🛒 Carrinho <span id="quantidade">(0)</span></h2>
+
+            <button id="fechar-carrinho">
+                &times;
+            </button>
+        </div>
+
+        <div class="carrinho-produtos" id="carrinho-produtos">
+        </div>
+
+        <div class="carrinho-footer">
+
+            <div class="subtotal">
+                <span>Subtotal</span>
+                <strong id="subtotal">
+                    R$ 0,00
+                </strong>
+            </div>
+
+            <button class="btn-finalizar">
+                Finalizar Compra
+            </button>
+
+            <button class="btn-continuar" id="continuar-comprando">
+                Continuar Comprando
+            </button>
+
+        </div>
+
+    </aside>
+
     <main>
         <section class="first-section">
             <div>
@@ -122,5 +157,6 @@
     </footer>
     <script type="module" src="./assets/js/fetch.js"></script>
     <script type="module" src="./assets/js/carrinho.js"></script>
+    <script type="module" src="./assets/js/script.js"></script>
 </body>
 </html>
