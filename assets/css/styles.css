@@ -118,6 +118,42 @@ main {
     overflow-y: auto;
 }
 
+.carrinho-header {
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    i {
+        color: white;
+    }
+}
+
+.diminuir, .aumentar {
+    width: 25px;
+    height: 25px;
+    color: white;
+    background-color: #d8063a;
+    border: 1px solid #db0037;
+    border-radius: 4px;
+}
+
+.remover-item {
+    width: 50px;
+    border: 1px solid #db0037;
+    background-color: #d8063a;
+    color: white;
+}
+
+.carrinho-titulo {
+    font-size: 30px;
+}
+
+.carrinho-footer {
+    margin: 0 auto;
+    .button-hero {
+        width: 190px;
+    }
+}
+
 .item-carrinho {
     display: flex;
     gap: 12px;
@@ -126,6 +162,14 @@ main {
     background: #151527;
     border: 1px solid #28283d;
     border-radius: 16px;
+}
+
+#fechar-carrinho {
+    background-color: #d8063a;
+    border: 0px;
+    border-radius: 8px;
+    width: 50px;
+    height: 50px;
 }
 
 .item-carrinho img {
