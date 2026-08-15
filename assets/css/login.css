@@ -1,0 +1,166 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+
+    font-family: Arial, sans-serif;
+
+    background: #0f0f1a;
+
+    color: #fff;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.login-container {
+    width: 100%;
+    padding: 20px;
+}
+
+.login-card {
+    width: 100%;
+    max-width: 420px;
+
+    margin: auto;
+    padding: 40px;
+
+    background: #171725;
+
+    border: 1px solid #29293c;
+    border-radius: 16px;
+
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.35);
+}
+
+.login-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.login-header h1 {
+    margin-bottom: 8px;
+
+    font-size: 28px;
+}
+
+.login-header p {
+    color: #999;
+    font-size: 14px;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+
+    gap: 8px;
+
+    margin-bottom: 20px;
+}
+
+.input-group label {
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.input-group input {
+    width: 100%;
+
+    padding: 13px 14px;
+
+    border: 1px solid #35354b;
+    border-radius: 8px;
+
+    outline: none;
+
+    background: #10101b;
+    color: #fff;
+
+    font-size: 14px;
+
+    transition: border-color 0.2s;
+}
+
+.input-group input:focus {
+    border-color: #e51c3e;
+}
+
+.input-group input::placeholder {
+    color: #666;
+}
+
+.btn-login {
+    width: 100%;
+
+    padding: 14px;
+
+    border: none;
+    border-radius: 8px;
+
+    background: #e51c3e;
+    color: #fff;
+
+    font-size: 15px;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+.btn-login:hover {
+    filter: brightness(1.1);
+}
+
+#mensagem-login {
+    margin-bottom: 15px;
+
+    color: #e51c3e;
+
+    font-size: 13px;
+    text-align: center;
+}
+
+.cadastro {
+    margin-top: 25px;
+    padding-top: 20px;
+
+    border-top: 1px solid #29293c;
+
+    text-align: center;
+
+    font-size: 13px;
+}
+
+.cadastro p {
+    display: inline;
+
+    color: #999;
+}
+
+.cadastro a {
+    margin-left: 5px;
+
+    color: #e51c3e;
+
+    font-weight: bold;
+
+    text-decoration: none;
+}
+
+.cadastro a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 480px) {
+
+    .login-card {
+        padding: 30px 20px;
+    }
+
+}
