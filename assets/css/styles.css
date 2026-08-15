@@ -20,27 +20,6 @@ header {
         justify-content: space-between;
         align-items: center;
     }
-    .link {
-        text-decoration: none;
-        color: white;
-        font-size: 16px;
-    }
-    .div-link {
-        cursor: pointer;
-        padding: 10px;
-        background-color: #d8063a;
-        border-radius: 20px;
-        width: 200px;
-        height: 45px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        transition: 700ms;
-        &:hover {
-            background-color: #db0037;
-            transform: scale(1.03);
-        }
-    }
     .logo-site {
         display: flex;
         justify-content: center;
@@ -50,50 +29,6 @@ header {
     .head-buttons {
         height: 45px;
     }
-    .busca-produto i {
-        color: white;
-        background-color: var(--vermelho);
-        width: 60px;
-        height: 40px;
-        border-radius: 20px;
-    }
-    input {
-        border-top-left-radius: 20px;
-        border-bottom-left-radius: 20px;
-        padding: 5px;
-        background-color: #4e4160;
-        color: white;
-        border: none;
-        font-size: 14px;
-        height: 40px;
-        width: 300px;
-        outline: none;
-    }
-    .busca-produto {
-        display: flex;
-        border: 1px #808080 solid;
-        border-radius: 20px;
-        width: 360px;
-        height: 45px;
-        justify-content: center;
-        align-items: center;
-    }
-    .icon {
-        border-top-right-radius: 20px;
-        border-bottom-right-radius: 20px;
-        background-color: #4e4160;
-        padding: 1px;
-        width: 60px;
-        height: 40px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        i {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-    }
     button {
         height: 45px;
         width: 200px;
@@ -101,6 +36,10 @@ header {
         border: none;
         border-radius: 20px;
         cursor: pointer;
+        transition: 700ms;
+        &:hover {
+            transform: scale(1.03);
+        }
     }
     .cart {
         background-color: #d8063a;
@@ -363,4 +302,181 @@ footer {
     height: 200px;
     gap: 200px;
     margin-bottom: 30px;
+}
+
+@media (max-width: 420px){
+    header {
+        padding: 10px 15px;
+        position: sticky;
+        position: static;
+    }
+
+    header .search-head {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    header .logo-site {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .logo {
+        width: 200px;
+        height: 100px;
+        object-fit: contain;
+    }
+
+    header .head-buttons {
+        width: 100%;
+        height: auto;
+        display: flex;
+        justify-content: center;
+        gap: 6px;
+    }
+
+    header button {
+        width: auto;
+        flex: 1;
+        height: 40px;
+        font-size: 13px;
+        border-radius: 16px;
+    }
+
+    .carrinho {
+        width: 100%;
+    }
+
+    .first-section {
+        padding: 40px 15px;
+        width: 100%;
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .first-section > div:first-child {
+        width: 100%;
+    }
+
+    .destaque-semana {
+        width: 220px;
+        font-size: 14px;
+    }
+
+    .produto-destaque {
+        font-size: 45px;
+        line-height: 1;
+        margin-bottom: 5px;
+    }
+
+    #cinza {
+        font-size: 14px;
+    }
+
+    .precos {
+        height: auto;
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+
+    .desconto-hero {
+        width: 90px;
+        height: 23px;
+        font-size: 12px;
+    }
+
+    .first-section h2.produto-destaque {
+        font-size: 42px;
+        margin-top: 10px;
+    }
+
+    .button-hero {
+        width: 100%;
+        margin-right: 0;
+    }
+
+    #ver-hero {
+        margin-top: 8px;
+    }
+
+    .hero-item {
+        width: 100%;
+        height: 300px;
+        background-size: cover;
+    }
+
+    .qualidades {
+        height: auto;
+        padding: 20px 15px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px 10px;
+    }
+
+    .qualidade-item {
+        gap: 8px;
+        align-items: center;
+    }
+
+    .qualidade-icon {
+        width: 42px;
+        min-width: 42px;
+        height: 42px;
+    }
+
+    .qualidade-content h4 {
+        font-size: 13px;
+    }
+
+    .qualidade-content p {
+        font-size: 11px;
+    }
+
+    .produtos {
+        grid-template-columns: 1fr;
+        padding: 25px 15px 40px 15px;
+        justify-items: center;
+    }
+
+    .card-produto {
+        width: 100%;
+        max-width: 350px;
+    }
+
+    .card-produto-img {
+        min-height: 280px;
+    }
+
+    footer {
+        padding: 0 15px 25px 15px;
+        text-align: center;
+    }
+
+    .footer-links {
+        width: 100%;
+        height: auto;
+        padding: 25px 0;
+        margin-bottom: 20px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 25px 15px;
+    }
+
+    .footer-links > div {
+        width: 100%;
+    }
+
+    .footer-links h4 {
+        font-size: 14px;
+        margin-bottom: 8px;
+    }
+
+    .footer-links p {
+        font-size: 12px;
+        margin-bottom: 5px;
+    }
+
+    footer > p {
+        font-size: 12px;
+    }
 }
