@@ -8,7 +8,7 @@
 }
 
 header {
-    padding: 15px 10% 10px 10%;
+    padding: 0px 10% 0px 10%;
     position: sticky;
     top: 0;
     z-index: 1000;
@@ -18,12 +18,37 @@ header {
     .search-head {
         display: flex;
         justify-content: space-between;
+        align-items: center;
     }
-    .head-buttons {
+    .link {
+        text-decoration: none;
+        color: white;
+        font-size: 16px;
+    }
+    .div-link {
+        cursor: pointer;
+        padding: 10px;
+        background-color: #d8063a;
+        border-radius: 20px;
+        width: 200px;
         height: 45px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: 700ms;
+        &:hover {
+            background-color: #db0037;
+            transform: scale(1.03);
+        }
     }
     .logo-site {
         display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 30px;
+    }
+    .head-buttons {
+        height: 45px;
     }
     .busca-produto i {
         color: white;
@@ -42,6 +67,7 @@ header {
         font-size: 14px;
         height: 40px;
         width: 300px;
+        outline: none;
     }
     .busca-produto {
         display: flex;
@@ -96,6 +122,10 @@ header {
             transform: scale(1.03);
         }
     }
+}
+
+.logo {
+    width: 200px;
 }
 
 .carrinho {
@@ -200,6 +230,7 @@ main {
 }
 
 .button-hero {
+    cursor: pointer;
     width: 200px;
     height: 50px;
     margin-top: 10px;

@@ -1,5 +1,5 @@
 main {
-    padding: 30px 5%;
+    display: flex;
 }
 
 .filtros {
@@ -9,10 +9,12 @@ main {
     flex-direction: column;
     color: white;
     width: 230px;
-    height: 710px;
+    height: auto;
+    position: sticky;
+    top: 0;
+    z-index: 999;
     gap: 5px;
     border: #311f4b 1px solid;
-    border-radius: 8px;
     button {
         height: 35px;
         width: 200px;
