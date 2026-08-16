@@ -154,10 +154,16 @@ main {
 }
 
 .carrinho-footer {
-    margin: 0 auto;
     .button-hero {
         width: 190px;
     }
+}
+
+.carrinho-buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
 }
 
 .item-carrinho {
@@ -358,7 +364,6 @@ footer {
 @media (max-width: 420px){
     header {
         padding: 10px 15px;
-        position: sticky;
         position: static;
     }
 
@@ -380,9 +385,9 @@ footer {
 
     header .head-buttons {
         width: 100%;
-        height: auto;
+        height: 100px;
         display: flex;
-        justify-content: center;
+        flex-wrap: wrap;
         gap: 6px;
     }
 
@@ -392,10 +397,23 @@ footer {
         height: 40px;
         font-size: 13px;
         border-radius: 16px;
+        width: 100%;
+    }
+
+    .link-prod button {
+        width: 100%;
+    }
+
+    header .link-prod {
+        width: 100%;
     }
 
     .carrinho {
         width: 100%;
+    }
+
+    .carrinho-buttons .button-hero {
+        width: 150px;
     }
 
     .first-section {
