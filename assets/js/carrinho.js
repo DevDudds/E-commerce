@@ -37,7 +37,7 @@ function adicionarCarrinho(id) {
     const item = carrinho.find(item => item.id === id);
 
     if (item) {
-        item.quantidade++;
+        alterarQuantidade(item.id, 1);
     } else {
         carrinho.push({
             ...produto,
@@ -45,18 +45,22 @@ function adicionarCarrinho(id) {
         });
     }
     salvarCarrinho();
+    atualizarQuantidadeCarrinho();
     renderizarProdutos();
 }
 
 function removerItem(id) {
     carrinho = carrinho.filter(item => item.id !== id);
     salvarCarrinho();
+    atualizarQuantidadeCarrinho();
     renderizarProdutos();
 }
 
 export default function renderizarProdutos() {
 
     const container = document.querySelector("#carrinho-produtos");
+    const quantidadeCarrinho = document.querySelector("#quantidade");
+
     container.innerHTML = "";
     carrinho.forEach(item => {
         const elemento = document.createElement("div");
@@ -99,14 +103,29 @@ export default function renderizarProdutos() {
         `;
 
         container.appendChild(elemento);
-
     });
+}
+
+function atualizarQuantidadeCarrinho() {
+    const quantidadeCarrinho = document.querySelector("#quantidade");
+    const carrinho = JSON.parse(localStorage.getItem("carrinho")) || [];
+
+    const quantidade = carrinho.reduce(
+        (total, item) => total + item.quantidade,
+        0
+    );
+
+    quantidadeCarrinho.textContent = `(${quantidade})`;
 }
 
 function alterarQuantidade(id, valor) {
     const item = carrinho.find(item => item.id === id);
 
     if (!item) return;
+
+    if (valor > 0 && item.quantidade >= item.estoque) {
+        return;
+    }
 
     item.quantidade += valor;
 
@@ -117,6 +136,7 @@ function alterarQuantidade(id, valor) {
     }
 
     salvarCarrinho();
+    atualizarQuantidadeCarrinho();
     renderizarProdutos();
 }
 

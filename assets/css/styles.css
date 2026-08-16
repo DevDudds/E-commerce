@@ -524,3 +524,39 @@ footer {
         font-size: 12px;
     }
 }
+
+.produto-imagem {
+    position: relative;
+    width: 100%;
+}
+
+.produto-imagem .card-produto-img {
+    display: block;
+    width: 100%;
+}
+
+.etiquetas {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+}
+
+.etiquetas span {
+    color: white;
+    font-size: 11px;
+    font-weight: bold;
+    padding: 6px 10px;
+    border-radius: 10px;
+}
+
+.top-seller {
+    background-color: #e6003c;
+}
+
+.desconto {
+    background-color: #00b879;
+}
