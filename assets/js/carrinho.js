@@ -6,6 +6,8 @@ let produtos = [];
 carregarProdutos().then(items => {
     produtos = items;
     configurarBotoes();
+    atualizarQuantidadeCarrinho();
+    atualizarPrecoTotal();
     renderizarProdutos();
 });
 
@@ -117,7 +119,6 @@ function calcularPrecoTotal() {
 
 function atualizarPrecoTotal() {
     const total = calcularPrecoTotal();
-    console.log(total);
     document.querySelector("#subtotal").textContent = total.toLocaleString("pt-BR", {
         style: "currency",
         currency: "BRL"

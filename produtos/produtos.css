@@ -70,10 +70,7 @@ main {
         color: white;
         background-color: #231438;
         transition: 100ms;
-        &:hover {
-            cursor: pointer;
-            background-color: #25163a;
-        }
+        cursor: pointer;
     }
     .categorias {
         display: flex;
@@ -227,4 +224,8 @@ main {
         object-fit: contain;
     }
 
+}
+
+.filtro-categoria.selecionado {
+    background-color: #d8063a;
 }
