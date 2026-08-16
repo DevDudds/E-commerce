@@ -10,7 +10,6 @@ Alunos: Eduardo dos Santos Costa e Erik Everton Rodrigues
 4 - "Efetuar Pagamento"  
 5 - Pesquisar produtos  
 6 - Filtrar produtos  
-7 - Públicar produtos  
 
 ## Motivação:
 Criar um site interativo com HTML, CSS e JavaScript para construir o nosso e-commerce.
