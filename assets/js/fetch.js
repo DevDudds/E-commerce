@@ -32,7 +32,7 @@ export async function carregarProdutos() {
                 <div class="card-produto">
 
                     <div class="produto-imagem">
-                        <img class="card-produto-img" src="./assets/imgs/4080.jpg" alt="">
+                        <img class="card-produto-img" src="${produto.imagem}" alt="">
                         <div class="etiquetas">
                             <span class="desconto">-${(produto.desconto*100).toFixed(0)}%</span>
                         </div>
