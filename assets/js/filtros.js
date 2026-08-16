@@ -24,8 +24,9 @@ export function criarBotoesCategorias(produtos) {
 
         botao.addEventListener("click", () => {
             if (categoria === "Todos") {
+                categoriasSelecionadas.clear();
                 document.querySelectorAll(".filtro-categoria").forEach(btn => {
-                        btn.classList.remove("selecionado");
+                    btn.classList.remove("selecionado");
                 });
 
                 botao.classList.add("selecionado")
