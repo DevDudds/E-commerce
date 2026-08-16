@@ -5,27 +5,25 @@ let produtos = [];
 
 carregarProdutos().then(items => {
     produtos = items;
-    configurarBotoes();
     atualizarQuantidadeCarrinho();
     atualizarPrecoTotal();
     renderizarProdutos();
 });
 
-function configurarBotoes() {
-    document.querySelectorAll(".button-hero").forEach(btn => {
-        btn.addEventListener("click", () => {
-            const id = Number(btn.dataset.id);
-            adicionarCarrinho(id);
-        });
-    });
-}
+const produtosContainer = document.querySelector("#produtos");
 
-document.querySelectorAll(".button-hero").forEach(btn => {
-    btn.addEventListener("click", () => {
-        const id = Number(btn.dataset.id);
-        adicionarCarrinho(id);
-    });
+produtosContainer.addEventListener("click", event => {
+
+    const botao = event.target.closest(".button-hero");
+
+    if (!botao) return;
+
+    const id = Number(botao.dataset.id);
+
+    adicionarCarrinho(id);
+
 });
+
 
 function salvarCarrinho() {
     localStorage.setItem("carrinho", JSON.stringify(carrinho));
@@ -40,6 +38,7 @@ function adicionarCarrinho(id) {
 
     if (item) {
         alterarQuantidade(item.id, 1);
+        return;
     } else {
         carrinho.push({
             ...produto,
