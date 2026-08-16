@@ -41,11 +41,13 @@ function adicionarCarrinho(id) {
     } else {
         carrinho.push({
             ...produto,
+            preco: produto.valor * (1 - produto.desconto),
             quantidade: 1
         });
     }
     salvarCarrinho();
     atualizarQuantidadeCarrinho();
+    atualizarPrecoTotal();
     renderizarProdutos();
 }
 
@@ -53,6 +55,7 @@ function removerItem(id) {
     carrinho = carrinho.filter(item => item.id !== id);
     salvarCarrinho();
     atualizarQuantidadeCarrinho();
+    atualizarPrecoTotal();
     renderizarProdutos();
 }
 
@@ -72,7 +75,7 @@ export default function renderizarProdutos() {
             <div class="item-info">
                 <h3>${item.nome}</h3>
                 <span class="item-preco">
-                    ${item.valor.toLocaleString("pt-BR", {
+                    ${item.preco.toLocaleString("pt-BR", {
                         style: "currency",
                         currency: "BRL"
                     })}
@@ -106,9 +109,23 @@ export default function renderizarProdutos() {
     });
 }
 
+function calcularPrecoTotal() {
+    return carrinho.reduce((total, item) => {
+        return total + item.preco * item.quantidade;
+    }, 0);
+}
+
+function atualizarPrecoTotal() {
+    const total = calcularPrecoTotal();
+    console.log(total);
+    document.querySelector("#subtotal").textContent = total.toLocaleString("pt-BR", {
+        style: "currency",
+        currency: "BRL"
+    })
+}
+
 function atualizarQuantidadeCarrinho() {
     const quantidadeCarrinho = document.querySelector("#quantidade");
-    const carrinho = JSON.parse(localStorage.getItem("carrinho")) || [];
 
     const quantidade = carrinho.reduce(
         (total, item) => total + item.quantidade,
@@ -137,6 +154,7 @@ function alterarQuantidade(id, valor) {
 
     salvarCarrinho();
     atualizarQuantidadeCarrinho();
+    atualizarPrecoTotal();
     renderizarProdutos();
 }
 

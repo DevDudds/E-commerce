@@ -112,6 +112,12 @@ main {
     font-size:80px;
 }
 
+.riscado {
+    text-decoration: line-through; 
+    color: gray;
+    font-weight: 100;
+}
+
 .carrinho-produtos {
     flex: 1;
     padding: 16px;
@@ -299,6 +305,7 @@ main {
     z-index: 0; 
     flex-direction: column;
     padding: 8px;
+    gap: 5px;
     width: 350px;
     height: auto;
     border: 1px #4e4160 solid;

@@ -14,7 +14,16 @@ export async function carregarProdutos() {
 
         produtosContainer.innerHTML = produtos.map(produto => {
 
-            const preco = produto.valor.toLocaleString("pt-BR", {
+            const valor = produto.valor;
+
+            const valorDesconto = valor * (1 - produto.desconto);
+
+            const precoAntigo = valor.toLocaleString("pt-BR", {
+                style: "currency",
+                currency: "BRL"
+            });
+
+            const preco = valorDesconto.toLocaleString("pt-BR", {
                 style: "currency",
                 currency: "BRL"
             });
@@ -34,12 +43,16 @@ export async function carregarProdutos() {
 
                     <h3>${produto.nome}</h3>
 
+                    <h2 class="produto-destaque riscado">
+                        ${precoAntigo}
+                    </h2>
+
                     <h2 class="produto-destaque">
                         ${preco}
                     </h2>
 
                     <p id="cinza">
-                        12x de R$ 1.083,25 sem juros
+                        12x de R$ ${(valor / 12).toFixed(2)} sem juros
                     </p>
 
                     <button data-id="${produto.id}" class="button-hero">
